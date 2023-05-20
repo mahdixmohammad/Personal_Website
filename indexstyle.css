@@ -1,122 +1,233 @@
-body{
+*
+{
+    text-decoration: none;
+    box-sizing: border-box;
+    color: white;
+}
+
+body
+{
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background: #212121;
-}
-
-.main
-{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-}
-
-.heading
-{
-    /* white-space: nowrap; */
-    position: sticky;
-} 
-
-.heading *
-{
-    display: inline;
-}
-
-#logo
-{
-    margin-left: 10%;
-    margin-top: 1%;
-    /* float: left; */
-    color: white;
-    font-family: cursive;
+    background: #121212;
 }
 
 nav
 {
     display: flex;
-    overflow: hidden;
     position: fixed;
-    top: 0;
+    background: #121212;
     width: 100%;
-    /*position: sticky;
-    padding-top: 20px;
-    padding-left: 15em;
-    justify-content: center; */
-    
+    height: 70px;
+    justify-content: space-between;
+    padding: 0 20px;
 }
 
-/* nav ul li
+#logo
+{
+    font-family: cursive;
+    font-size: 25px;
+    font-weight: bold;
+    align-self: center;
+    margin-left: 30px;
+}
+
+#menu-icon
+{
+    width: 30px;
+}
+
+.hamburger
+{
+    display: none;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.hamburger .line
+{
+    background: white;
+    width: 30px;
+    height: 3.5px;
+    margin: 6px 0;
+    border-radius: 5px;
+}
+
+@media (max-width: 883px)
+{
+    .hamburger
+    {
+        display: block;
+        position: fixed;
+        right: 20px;
+    }
+    nav ul
+    {
+        display: none;
+    }
+    #logo
+    {
+        margin: 50% 40%;
+    }
+}
+
+nav ul li
 {
     display: inline-block;
-    margin: 10px 20px;
-} */
-
-nav ul li a
-{
-    color: #fff;
-    text-decoration: none;
+    margin: 13px 15px;
+    list-style: none;
+    font-size: 18px;
     font-weight: bold;
 }
 
 nav ul li a:hover
 {
     color: red;
+    transition: 0.4s;
+}
+
+.active
+{
+    position: fixed;
+}
+
+.active ul
+{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgb(25, 25, 25);
+    top: 54px;
+    left: 0;
+    text-align: center;
+}
+
+.active #logo
+{
+    margin: 50% 40%;
+}
+
+.active .hamburger
+{
+    display: block;
+    position: fixed;
+    right: 20px;
+}
+.active ul li
+{
+    margin-top: 50px !important;
+    font-size: 22px !important;
+    line-height: 40px;
 }
 
 .intro
 {
-    margin-left: 8%;
-    margin-top: 13%;
+    display: inline-block;
+    background: linear-gradient(to bottom right, rgb(45, 45, 45), rgb(0, 0, 0));/*rgb(25, 25, 25);*/
+    width: 100%;
+    height: 750px;
+    padding: 100px 80px;
 }
 
 .intro h1
 {
-    font-size: 50px;
-    color: #fff;
+    font-size: 60px;
+    margin-top: 100px;
     margin-bottom: 20px;
 }
 
 .intro h1 span
 {
-    color: red;
     display: block;
+    background: red;/*linear-gradient(90deg, white, red);*/
+    background-size: 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 12s linear infinite;
+}
+
+@keyframes gradient
+{
+    0%
+    {
+        background-position: 0%;
+    }
+    80%
+    {
+        background-position: 300%;
+    }
+    100%
+    {
+        background-position: 400%;
+    }
 }
 
 .intro p
 {
-    color: #AAA;
-    line-height: 22px;
+    color: #b3b3b3;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.links
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 250px;
+}
+
+#contact_btn
+{
+    font-size: 16px;
+    font-weight: bold;
+    width: 120px;
+    padding: 12px 0px;
+    border: 2px solid red;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#contact_btn:hover
+{
+    color: red;
+    transition: 0.3s;
 }
 
 #github
 {
-    width: 30px;
+    width: 50px;
 }
 
 #linkedin
 {
-    width: 30px;
+    width: 50px;
 }
 
 #github:hover
 {
     opacity: 0.6;
+    transition: 0.3s;
 }
 
 #linkedin:hover
 {
-    opacity: 0.6
-}
-
-#HOME
-{
-    color: red;
-    font-weight: bold;
+    opacity: 0.6;
+    transition: 0.3s;
 }
 
 .summary
 {
     height: 500px;
-    background: #121212;
+}
+
+#contact_me
+{
+    background-color: red;
+    text-align: center;
+    font-weight: bold;
+    height: 500px;
 }
