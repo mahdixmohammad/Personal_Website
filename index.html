@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta http-equiv="refresh" content="1"> AUTO REFRESH-->
     <title>Personal Portfolio</title>
     <link rel="stylesheet" href="indexstyle.css">
 </head>
@@ -12,8 +13,8 @@
     <nav class="nav-bar">
         <label id="logo">mahdixmohammad</label>
         <ul>
-            <li id="first"><a href="#">HOME</a></li>
-            <li><a href="#">ABOUT</a></li>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
             <li><a href="#">TRADES</a></li>
             <li><a href="#">PROJECTS</a></li>
             <li><a href="#contact_me">CONTACT</a></li>
@@ -26,28 +27,55 @@
     </nav>
     <script>
         hamburger = document.querySelector(".hamburger");
-        hamburger.onclick = function(){
+        hamburger.onclick = function()
+        {
             navBar = document.querySelector(".nav-bar");
             navBar.classList.toggle("active");
         }
     </script>
-    <div class="intro">
+    <div id="home">
         <h1>Mahdi<span>Mohammad</span></h1>
         <p>Showcasing my portfolio and experiences.</p>
         <div class="links">
             <a href="#contact_me" id="contact_btn">Contact Me</a>
+            <a href="https://www.instagram.com/mahdixmohammad/" target="_blank">
+                <img src="instagram_logo.png" alt="Instagram" title="Instagram" class="link">
+            </a>
             <a href="https://github.com/mahdixmohammad" target="_blank">
-                <img src="https://icones.pro/wp-content/uploads/2021/06/icone-github-violet.png" alt="GitHub" title="GitHub" id="github">
+                <img src="github_logo.png" alt="GitHub" title="GitHub" class="link">
             </a>
             <a href="https://www.linkedin.com/in/mahdixmohammad/" target="_blank">
-                <img src="https://itcnet.gr/wp-content/uploads/2020/09/Linkedin-logo-on-transparent-Background-PNG--1024x1024.png" alt="LinkedIn" title="LinkedIn" id="linkedin">
+                <img src="linkedin_logo.png" alt="LinkedIn" title="LinkedIn" class="link">
             </a>
         </div>
     </div>
-    <div class="summary">
+    <div id="about">
         
     </div>
-    <div class="row" id="contact_me">
+    
+    <div id="contact_me">
+        <form>
+            <h3>CONTACT ME</h3>
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="email" id="email" placeholder="Email Address" required>
+            <input type="text" id="phone" placeholder="Phone Number" required>
+            <textarea id="message" rows="4" placeholder="Message"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div id="footer">
+        <label id="logo">mahdixmohammad</label>
+        <div id="languages">
+            <img src="canada_flag.png" alt="Canada" title="Canada" class="flag">
+            <img src="france_flag.png" alt="France" title="France" class="flag">
+            <img src="iraq_flag.png" alt="Iraq" title="Iraq" class="flag">
+        </div>
+        <label id="copyright">Copyright © 2023 Mahdi Mohammad. All rights reserved.</label>
+    </div>
+
+    
+    <!--<div class="row" id="contact_me">
         <div class="col-md-6 col-md-offset-3" id="form_container">
             <h2>Contact Me</h2>
             <form role="form" method="post" id="reused_form">
@@ -85,6 +113,6 @@
                 Sorry there was an error sending your form.
             </div>
         </div>
-    </div>
+    </div>-->
 </body>
 </html>
