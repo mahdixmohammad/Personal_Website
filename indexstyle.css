@@ -17,15 +17,16 @@ body
 
 nav
 {
+    z-index: 10000;
     display: flex;
     position: fixed;
-    background: #121212;
+    background: black;
     width: 100%;
     height: 70px;
     line-height: 75px;
     justify-content: space-between;
     padding: 0 20px;
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid #191919;
 }
 
 #logo
@@ -143,7 +144,8 @@ nav ul li a:hover
 
 #home
 {
-    background: linear-gradient(to bottom right, rgb(45, 45, 45), rgb(0, 0, 0));/*rgb(25, 25, 25);*/
+    /* background: linear-gradient(to bottom right, rgb(45, 45, 45), rgb(0, 0, 0));rgb(25, 25, 25); */
+    background: black;
     min-width: fit-content;
     width: 100%;
     height: 100vh;
@@ -151,9 +153,22 @@ nav ul li a:hover
     border-bottom: 5px solid black;
 }
 
+#home *
+{
+    position: relative;
+}
+
+#mahdi
+{
+    position: absolute;
+    height: 100vh;
+    top: 36px;
+    right: 0%;
+}
+
 #home h1
 {
-    font-size: 60px;
+    font-size: 6vw;
     margin-top: 100px;
     margin-bottom: 20px;
 }
@@ -184,7 +199,7 @@ nav ul li a:hover
 #home p
 {
     color: #b3b3b3;
-    font-size: 18px;
+    font-size: 2vw;
     font-weight: bold;
 }
 
@@ -193,33 +208,21 @@ nav ul li a:hover
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 300px;
+    width: 380px;
     margin-top: 20px;
-}
-
-#contact_btn
-{
-    font-weight: bold;
-    width: 120px;
-    padding: 14px 0px;
-    border: 2px solid rgb(0, 119, 255);
-    border-radius: 20px;
-    text-align: center;
-}
-
-#contact_btn:hover
-{
-    color: rgb(0, 119, 255);
-    transition: 0.3s;
 }
 
 .link
 {
-    width: 50px;
+    width: 80px;
+    padding: 13px 13px;
+    border: 2px solid rgb(0, 119, 255);
+    border-radius: 50px;
 }
 
 .link:hover
 {
+    color: rgb(0, 119, 255);
     opacity: 0.6;
     transition: 0.3s;
 }
@@ -280,7 +283,7 @@ form button
 
 #footer
 {
-    background: black;
+    background: rgb(10, 10, 10);
     padding: 20px 0;
     width: 100%;
     height: 175px;
