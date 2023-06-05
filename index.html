@@ -16,7 +16,7 @@
             <li><a href="#home">HOME</a></li>
             <li><a href="#about">ABOUT</a></li>
             <li><a href="#trades">TRADES</a></li>
-            <li><a href="#">PROJECTS</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
             <li><a href="#contact_me">CONTACT</a></li>
         </ul>
         <div class="hamburger">
@@ -35,23 +35,25 @@
     </script>
     
     <div id="home">
-        <img src="mahdi_image.png" alt="Mahdi" id="mahdi">
-        <h1>Mahdi<span>Mohammad</span></h1>
-        <p>Full-Stack Developer and Professional Trader.</p>
-        <div class="links">
-            <a href="https://www.instagram.com/mahdixmohammad/" target="_blank">
-                <img src="instagram_logo.png" alt="Instagram" title="Instagram" class="link">
-            </a>
-            <a href="https://github.com/mahdixmohammad" target="_blank">
-                <img src="github_logo.png" alt="GitHub" title="GitHub" class="link">
-            </a>
-            <a href="https://www.linkedin.com/in/mahdixmohammad/" target="_blank">
-                <img src="linkedin_logo.png" alt="LinkedIn" title="LinkedIn" class="link">
-            </a>
-            <a href="#contact_me">
-                <img src="email_logo.png" alt="Contact Me" title="Contact Me" class="link">
-            </a>
+        <div id="home-left">
+            <h1>Mahdi<span>Mohammad</span></h1>
+            <p>Full-Stack Developer and Professional Trader.</p>
+            <div class="links">
+                <a href="https://www.instagram.com/mahdixmohammad/" target="_blank">
+                    <img src="instagram_logo.png" alt="Instagram" title="Instagram" class="link">
+                </a>
+                <a href="https://github.com/mahdixmohammad" target="_blank">
+                    <img src="github_logo.png" alt="GitHub" title="GitHub" class="link">
+                </a>
+                <a href="https://www.linkedin.com/in/mahdixmohammad/" target="_blank">
+                    <img src="linkedin_logo.png" alt="LinkedIn" title="LinkedIn" class="link">
+                </a>
+                <a href="#contact_me">
+                    <img src="email_logo.png" alt="Contact Me" title="Contact Me" class="link">
+                </a>
+            </div>
         </div>
+        <img src="mahdi_image.png" alt="Mahdi" id="mahdi">
     </div>
 
     <div id="about">
@@ -63,7 +65,7 @@
     </div>
 
     <div id="contact_me">
-        <form>
+        <form onsubmit="sendEmail(); reset(); return false;">
             <h2>CONTACT ME</h2>
             <input type="text" id="name" placeholder="Name" required>
             <input type="email" id="email" placeholder="Email Address" required>
@@ -72,7 +74,23 @@
             <button type="submit">Submit</button>
         </form>
     </div>
-
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail()
+        {
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "mahdi3mohammad@gmail.com",
+                Password : "password",
+                To : 'mahdi3mohammad@gmail.com',
+                From : document.getElementById("email").value,
+                Subject : "New Contact Form Enquiry",
+                Body : "And this is the body"
+            }).then(
+              message => alert(message)
+            );
+        }
+    </script>
     <div id="footer">
         <label id="logo">mahdixmohammad</label>
         <div id="languages">
