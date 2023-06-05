@@ -22,7 +22,7 @@ body
 
 nav
 {
-    z-index: 100;
+    z-index: 1000;
     display: flex;
     position: fixed;
     background: black;
@@ -31,7 +31,6 @@ nav
     line-height: 75px;
     justify-content: space-between;
     padding: 0 20px;
-    /* border-bottom: 3px solid #191919; */
 }
 
 #logo
@@ -150,6 +149,7 @@ nav ul li a:hover
 #home
 {
     background: black;
+    position: relative;
     display: flex;
     width: 100%;
     height: 100vh;
@@ -159,12 +159,94 @@ nav ul li a:hover
     overflow: hidden;
 }
 
+@keyframes move-background
+{
+    from
+    {
+        -webkit-transform: translate3d(0px, 0px, 0px);
+    }
+    to
+    { 
+        -webkit-transform: translate3d(1000px, 0px, 0px);
+    }
+}
+
+@-webkit-keyframes move-background
+{
+    from
+    {
+        -webkit-transform: translate3d(0px, 0px, 0px);
+    }
+    to 
+    { 
+        -webkit-transform: translate3d(1000px, 0px, 0px);
+    }
+}
+  
+@-moz-keyframes move-background
+{    
+    from
+    {
+        -webkit-transform: translate3d(0px, 0px, 0px);
+    }
+    to
+    { 
+        -webkit-transform: translate3d(1000px, 0px, 0px);
+    }
+}
+  
+@-webkit-keyframes move-background
+{
+    from 
+    {
+        -webkit-transform: translate3d(0px, 0px, 0px);
+    }
+    to
+    { 
+        -webkit-transform: translate3d(1000px, 0px, 0px);
+    }
+}
+
+.stars 
+{
+    background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+}
+  
+.twinkling
+{
+    width:10000px;
+	height: 100%;
+	background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
+	background-size: 1000px 1000px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -moz-animation: move-background 70s linear infinite;
+    -ms-animation: move-background 70s linear infinite;
+    -o-animation: move-background 70s linear infinite;
+    -webkit-animation: move-background 70s linear infinite;
+    animation: move-background 50s linear infinite;
+}
+
 #mahdi
 {
     height: 100vh;
     max-height: 1000px;
     margin-top: -65px;
     margin-right: -80px;
+    z-index: 100;
+}
+
+#home-left
+{
+    z-index: 100;
 }
 
 #home h1
@@ -172,17 +254,18 @@ nav ul li a:hover
     font-size: 70px;
     margin-top: 100px;
     margin-bottom: 20px;
+    z-index: 1000;
 }
 
 #home h1 span
 {
     display: block;
-    background: rgb(0, 119, 255);/*linear-gradient(90deg, white, rgb(0, 119, 255));*/
+    background: linear-gradient(90deg, white, rgb(0, 119, 255)); /*rgb(0, 119, 255);*/
     background-size: 200%;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: gradient 7s linear infinite;
+    animation: gradient 10s linear infinite;
 }
 
 @keyframes gradient
@@ -213,7 +296,6 @@ nav ul li a:hover
     }
     #home
     {
-        background: linear-gradient(to bottom right, rgb(0,0,0), rgb(14, 14, 14), rgb(0, 0, 0));
         display: flex;
         flex-direction: column;
         justify-items: center;
@@ -222,11 +304,14 @@ nav ul li a:hover
     }
     #home h1
     {
+        margin: auto;
         font-size: 50px;
     }
     #home p
     {
         font-size: 20px;
+        margin: auto;
+        margin-top: 20px;
         margin-bottom: 25px;
     }
     #home .links
@@ -266,8 +351,50 @@ nav ul li a:hover
 
 #about
 {
-    background: rgb(9, 9, 9);
+    display: flex;
+    background: radial-gradient(circle,  rgb(14, 14, 14) 20%, rgb(0,0,0) 70%);
     height: 100vh;
+    max-height: 1000px;
+    width: 100%;
+    max-height: 1000px;
+    justify-content: center;
+}
+
+#about h1
+{
+    margin: 30px;
+}
+
+#trades
+{
+    display: flex;
+    background: radial-gradient(circle,  rgb(14, 14, 14) 20%, rgb(0,0,0) 70%);
+    height: 100vh;
+    max-height: 1000px;
+    width: 100%;
+    max-height: 1000px;
+    justify-content: center;
+}
+
+#trades h1
+{
+    margin: 30px;
+}
+
+#projects
+{
+    display: flex;
+    background: radial-gradient(circle,  rgb(14, 14, 14) 20%, rgb(0,0,0) 70%);
+    height: 100vh;
+    max-height: 1000px;
+    width: 100%;
+    max-height: 1000px;
+    justify-content: center;
+}
+
+#projects h1
+{
+    margin: 30px;
 }
 
 #contact_me
