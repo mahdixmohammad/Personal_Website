@@ -2,12 +2,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal_Website</title>
+    <title>Mahdi Mohammad</title>
+    <link rel="icon" href="mahdi_icon.png">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 </head>
 <body>
-    <div>
-
-    </div>
+    <nav>
+        <label class="logo"><a href="">MAHDI</a></label>
+        <ul>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <div id="headline">
+            <h3>Hello, my name is</h3>
+            <h1>MAHDI MOHAMMAD</h1>
+            <div class="links">
+                <a href="#contact" id="contactbtn">GET IN TOUCH</a>
+                <a href="https://www.instagram.com/mahdixmohammad/" target="_blank">
+                    <img src="logos/instagram_logo.png" alt="Instagram" title="Instagram" class="link">
+                </a>
+                <a href="https://github.com/mahdixmohammad" target="_blank">
+                    <img src="logos/github_logo.png" alt="GitHub" title="GitHub" class="link">
+                </a>
+                <a href="https://www.linkedin.com/in/mahdixmohammad/" target="_blank">
+                    <img src="logos/linkedin_logo.png" alt="LinkedIn" title="LinkedIn" class="link">
+                </a>
+            </div>
+        </div>
+        <img src="home.png" id="mahdi">
+    </section>
+    <section id="about">
+        <div class="title"><h1>ABOUT</h1></div>
+        <div id="content1">
+            <div id="pfp">
+            </div>
+            <div id="description">
+                <h2>Full-Stack Developer and Professional Trader.</h2>
+                <p> Hello, my name is Mahdi Mohammad. Based in Ontario, Canada, I am currently an 
+                    undergraduate student at McMaster University pursuing full-time computer science 
+                    with a minor in mathematics. I am an experienced programmer in multiple languages, 
+                    tools, and frameworks, and I have also completely self-taught myself the art of 
+                    trading through 2 years of experience. I also have the ability to communicate in 
+                    multiple languages including English, French, and Arabic. I have massive passion 
+                    and extreme dedication towards everything that I commit to in my life.
+                    <br><br>
+                    Outside of work and education, I prioritize my health and fitness by engaging 
+                    in both physical and mental exercise. For example, I indulge in a variety of sports 
+                    including soccer and basketball, and I have an enormous amount of passion for working
+                    out at the gym. As for mental exercise, I love reading and learning, especially about
+                    life philosophies like stoicism.
+                    <br><br>
+                    <em>
+                        If you are looking to collaborate with me, please contact me through any of my social 
+                        media or directly on this website.
+                    </em>
+                </p>
+            </div>
+            <div id="skills">
+                <h2>My Skills</h2>
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
+                    <p>Python</p>
+                    <div class="progress">
+                        <p>70%</p>
+                        <div id="python-progress"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
+                    <p>HTML</p>
+                    <div class="progress">
+                        <p>80%</p>
+                        <div id="html-progress"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
+                    <p>CSS</p>
+                    <div class="progress">
+                        <p>80%</p>
+                        <div id="css-progress"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
+                    <p>JavaScript</p>
+                    <div class="progress">
+                        <p>70%</p>
+                        <div id="javascript-progress"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg">
+                    <p>C/C++</p>
+                    <div class="progress">
+                        <p>50%</p>
+                        <div id="c-progress"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projects">
+        <div class="title"><h1>PROJECTS</h1></div>
+        <div id="content2">
+            <div class="project" id="p1">
+                <h2>SimuTrade</h2>
+                <p>Project Description...</p>
+                <p><span>Languages/Tools: </span>HTML, CSS, JavaScript</p>
+                <a href="" target="_blank" class="view-project">VIEW PROJECT</a>
+                <a href="https://github.com/mahdixmohammad/SimuTrade" target="_blank" class="git-project">VIEW GITHUB</a>
+            </div>
+            <div class="project" id="p2">
+                <h2>InnoTrade</h2>
+                <p>Project Description...</p>
+                <p><span>Languages/Tools: </span>Python</p>
+                <a href="" target="_blank" class="view-project">VIEW PROJECT</a>
+                <a href="" target="_blank" class="git-project">VIEW GITHUB</a>
+            </div>
+            <div class="project" id="p3">
+                <h2>CyberZero</h2>
+                <p>Project Description...</p>
+                <p><span>Languages/Tools: </span>Python</p>
+                <a href="" target="_blank" class="view-project">VIEW PROJECT</a>
+                <a href="" target="_blank" class="git-project">VIEW GITHUB</a>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <form method="post" action="send-email.php">
+            <!-- action="https://formsubmit.co/4722a4ff8ef0f9a5243f3b3bc7cf437c" -->
+            <div class="title"><h1>CONTACT ME</h1></div>
+            <input type="text" id="name" name="name" placeholder="Full Name" required>
+            <input type="email" id="email" name="email" placeholder="Email Address" required>
+            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+            <textarea id="message" rows="4" name="message" placeholder="Message"></textarea>
+            <button type="submit">Send</button>
+            <input type="hidden" name="_captcha" value="false">
+        </form>
+    </section>    
+    <footer>
+        <label class="logo">MAHDI</label>
+        <div id="languages">
+            <img src="logos/canada_flag.png" alt="Canada" title="Canada" class="flag">
+            <img src="logos/france_flag.png" alt="France" title="France" class="flag">
+            <img src="logos/iraq_flag.png" alt="Iraq" title="Iraq" class="flag">
+        </div>
+        <div id="footer-links">
+            <a href="https://www.instagram.com/mahdixmohammad/" target="_blank">Instagram</a>
+            <a href="https://github.com/mahdixmohammad" target="_blank">Github</a>
+            <a href="https://www.linkedin.com/in/mahdixmohammad/" target="_blank">LinkedIn</a>
+        </div>
+        <label id="copyright">Copyright © 2023 Mahdi Mohammad. All rights reserved.</label>
+    </footer>
+    <script src="index.js"></script>
 </body>
 </html>
