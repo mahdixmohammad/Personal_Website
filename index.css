@@ -192,6 +192,7 @@ nav ul li a:hover {
     }
     #about p {
         text-align: left !important;
+        font-size: 20px !important;
     }
 }
 #links {
@@ -297,7 +298,7 @@ nav ul li a:hover {
         align-items: center;
     }
     #description {
-        width: 90%;
+        width: 80%;
     }
     #content2 {
         flex-direction: column;
