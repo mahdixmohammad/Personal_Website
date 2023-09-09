@@ -2,6 +2,14 @@
     --progress1-color: rgb(0, 200, 0);
     --progress2-color: rgb(200, 0, 0);
 }
+@font-face {
+    font-family: "Logam";
+    src: url("fonts/Logam.otf");
+}
+@font-face {
+    font-family: "Agency";
+    src: url("fonts/Agency.TTF");
+}
 * {
     padding: 0;
     margin: 0;
@@ -14,7 +22,7 @@ html {
 }
 body {
     background: rgb(20, 20, 20);
-    font-family: "Agency FB";
+    font-family: "Agency";
     overflow-x: hidden;
 }
 nav {
@@ -31,10 +39,7 @@ nav {
     z-index: 1000;
     overflow: hidden;
 }
-@font-face {
-    font-family: "Logam";
-    src: url("fonts/Logam.otf");
-}
+
 .logo {
     font-size: 32px;
     font-family: "Logam";
@@ -523,7 +528,7 @@ form button {
     background: rgb(255, 83, 97);
     border: 0px;
     border-radius: 30px;
-    font-family: "Agency FB";
+    font-family: "Agency";
     font-size: 24px;
     font-weight: 800;
     line-height: 50px;
