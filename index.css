@@ -200,6 +200,9 @@ nav ul li a:hover {
         text-align: left !important;
         font-size: 20px !important;
     }
+    #copyright {
+        font-size: 14px;
+    }
 }
 #links {
     display: flex;
@@ -584,5 +587,5 @@ footer .logo {
     transition: 0.3s;
 }
 #copyright {
-    margin-top: 10px;
+    margin: 10px 20px 0 20px;
 }
