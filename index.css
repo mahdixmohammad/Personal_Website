@@ -340,7 +340,7 @@ nav ul li a:hover {
 }
 #content2 h2 {
     text-align: center;
-    font-size: 28px;
+    font-size: 30px;
 }
 #languages {
     display: flex;
@@ -358,13 +358,21 @@ nav ul li a:hover {
     width: 75px;
     margin: 10px;
 }
+.skill img:hover, .skill i:hover {
+    font-size: 90px !important;
+    margin: 2.63px !important;
+    width: 90px;
+    transition: 0.3s;
+}
 .skill p {
+    position: absolute;
     margin-top: 18px !important;
+    margin-left: 98px;
 }
 .progress p {
     position: absolute;
     margin-top: -32px !important;
-    margin-left: 142px;
+    margin-left: 150px;
 }
 .progress {
     background: rgb(169, 169, 169);
