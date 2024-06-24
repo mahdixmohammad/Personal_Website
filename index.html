@@ -11,10 +11,10 @@
     <nav>
         <label class="logo"><a href="">MAHDI</a></label>
         <ul>
-            <li><a href="#about">ABOUT</a></li>
-            <li><a href="#skills">SKILLS</a></li>
+            <li><a>ABOUT</a></li>
+            <li><a>SKILLS</a></li>
             <!-- <li><a href="#projects">PROJECTS</a></li> -->
-            <li><a href="#contact">CONTACT</a></li>
+            <li><a>CONTACT</a></li>
         </ul>
         <div id="hamburger">
             <div class="line"></div>
@@ -28,7 +28,7 @@
             <h1>MAHDI MOHAMMAD</h1>
             <h2>Full Stack Developer and Professional Trader.</h2>
             <div id="links">
-                <a href="#contact" id="contactbtn">GET IN TOUCH</a>
+                <a id="contactbtn">GET IN TOUCH</a>
                 <div id="sublinks">
                     <a href="https://www.instagram.com/mahdixmohammad/" target="_blank">
                         <img src="logos/instagram_logo.png" alt="Instagram" title="Instagram" class="link">
@@ -44,7 +44,7 @@
         </div>
         <img src="images/home.png" id="mahdi" onerror="this.onerror=null; this.remove();" alt="me">
     </section>
-    <section id="about">
+    <section id="about" class="popin">
         <div class="title"><h1>ABOUT</h1></div>
         <div id="content1">
             <div id="pfp"></div>
@@ -72,7 +72,33 @@
 
         </div>
     </section>
-    <section id="skills">
+    <!-- <section id="projects">
+        <div class="title"><h1>PROJECTS</h1></div>
+        <div id="content3">
+            <div class="project" id="p1">
+                <h2>SimuTrade</h2>
+                <p>Project Description...</p>
+                <p><span>Languages/Tools: </span>HTML, CSS, JavaScript</p>
+                <a href="" target="_blank" class="view-project">VIEW PROJECT</a>
+                <a href="https://github.com/mahdixmohammad/SimuTrade" target="_blank" class="git-project">VIEW GITHUB</a>
+            </div>
+            <div class="project" id="p2">
+                <h2>InnoTrade</h2>
+                <p>Project Description...</p>
+                <p><span>Languages/Tools: </span>Python</p>
+                <a href="" target="_blank" class="view-project">VIEW PROJECT</a>
+                <a href="" target="_blank" class="git-project">VIEW GITHUB</a>
+            </div>
+            <div class="project" id="p3">
+                <h2>CyberZero</h2>
+                <p>Project Description...</p>
+                <p><span>Languages/Tools: </span>Python</p>
+                <a href="" target="_blank" class="view-project">VIEW PROJECT</a>
+                <a href="" target="_blank" class="git-project">VIEW GITHUB</a>
+            </div>
+        </div>
+    </section> -->
+    <section id="skills" class="popin">
         <div class="title"><h1>SKILLS</h1></div>
         <div id="content2">
             <div id="languages">
@@ -164,33 +190,7 @@
             
         </div>
     </section>
-    <!-- <section id="projects">
-        <div class="title"><h1>PROJECTS</h1></div>
-        <div id="content3">
-            <div class="project" id="p1">
-                <h2>SimuTrade</h2>
-                <p>Project Description...</p>
-                <p><span>Languages/Tools: </span>HTML, CSS, JavaScript</p>
-                <a href="" target="_blank" class="view-project">VIEW PROJECT</a>
-                <a href="https://github.com/mahdixmohammad/SimuTrade" target="_blank" class="git-project">VIEW GITHUB</a>
-            </div>
-            <div class="project" id="p2">
-                <h2>InnoTrade</h2>
-                <p>Project Description...</p>
-                <p><span>Languages/Tools: </span>Python</p>
-                <a href="" target="_blank" class="view-project">VIEW PROJECT</a>
-                <a href="" target="_blank" class="git-project">VIEW GITHUB</a>
-            </div>
-            <div class="project" id="p3">
-                <h2>CyberZero</h2>
-                <p>Project Description...</p>
-                <p><span>Languages/Tools: </span>Python</p>
-                <a href="" target="_blank" class="view-project">VIEW PROJECT</a>
-                <a href="" target="_blank" class="git-project">VIEW GITHUB</a>
-            </div>
-        </div>
-    </section> -->
-    <section id="contact">
+    <section id="contact" class="popin">
         <form method="post" data-netlify="true">
             <div class="title"><h1>CONTACT ME</h1></div>
             <input type="text" id="name" name="name" placeholder="Full Name" required>
