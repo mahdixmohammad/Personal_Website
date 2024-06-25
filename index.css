@@ -85,7 +85,7 @@ nav li a:hover {
   transition: background 0.2s;
 }
 
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 700px) {
   nav {
     height: 70px;
     overflow: visible;
@@ -126,8 +126,8 @@ nav li a:hover {
   background: rgb(255, 83, 97);
 }
 
-section {
-  margin-bottom: 40px;
+section:not(section:first-of-type) {
+  padding-top: 100px;
 }
 
 #home {
@@ -207,7 +207,7 @@ section {
   #headline {
     transform: scale(0.8);
   }
-  #about p {
+  section:nth-of-type(2) p {
     text-align: left !important;
     font-size: 20px !important;
   }
@@ -216,6 +216,12 @@ section {
   }
   #copyright {
     font-size: 14px;
+  }
+  form {
+    width: 100% !important;
+  }
+  form input, form textarea {
+    padding: 4% !important;
   }
 }
 #links {
@@ -282,8 +288,12 @@ section {
   border-radius: 50px;
 }
 
-#about {
-  padding-top: 80px;
+.scroll-to {
+  visibility: hidden;
+  width: 0.1px;
+  height: 0.1px;
+  margin: auto;
+  scroll-margin-top: 80px;
 }
 
 .title {
@@ -291,7 +301,7 @@ section {
   height: 52px;
   margin: auto;
   text-align: center;
-  margin-bottom: 45px;
+  margin-bottom: 40px;
   border: 2px solid rgb(255, 83, 97);
   line-height: 50px;
   box-shadow: 0 0 6px rgb(255, 83, 97);
@@ -342,147 +352,16 @@ section {
   #description {
     width: 80%;
   }
-  #content2 {
-    flex-direction: column;
-    align-items: center;
-  }
-  #languages {
-    margin-bottom: 40px !important;
-  }
 }
-#about h2 {
+section:nth-of-type(2) h2 {
   font-size: 40px;
 }
 
-#about p {
+section:nth-of-type(2) p {
   margin-top: 18px;
   color: rgb(211, 211, 211);
   font-size: 23px;
   text-align: justify;
-}
-
-#skills {
-  padding-top: 80px;
-}
-
-#content2 {
-  display: flex;
-  justify-content: center;
-}
-
-#content2 > div {
-  margin: 0 25px;
-  display: flex;
-  flex-direction: column;
-  width: 325px;
-  background: rgba(10, 10, 10, 0.8);
-  border: 1px solid transparent;
-  box-shadow: 0 0 10px rgb(53, 53, 53);
-  padding: 10px 20px;
-}
-
-#content2 > div:hover {
-  border: 1px solid rgb(255, 83, 97);
-  box-shadow: 0 0 5px rgb(255, 83, 97);
-  transform: scale(1.05);
-  transition: 0.6s;
-}
-
-#content2 h2 {
-  text-align: center;
-  font-size: 30px;
-}
-
-.skill {
-  display: flex;
-  align-self: start;
-}
-
-.skill img {
-  width: 75px;
-  margin: 10px;
-}
-
-.skill img:hover, .skill i:hover {
-  transform: scale(1.15);
-  transition: 0.3s;
-}
-
-.skill p {
-  position: absolute;
-  margin-top: 18px !important;
-  margin-left: 98px;
-}
-
-.progress {
-  background: rgb(169, 169, 169);
-  position: absolute;
-  margin-top: 50px;
-  margin-left: 95px;
-  width: 175px;
-  height: 15px;
-  border-radius: 20px;
-}
-.progress p {
-  position: absolute;
-  top: -50px;
-  left: 50px;
-}
-
-.lang-progress {
-  height: 100%;
-  background: rgb(0, 200, 0);
-  border-radius: 20px;
-}
-
-.tool-progress {
-  height: 100%;
-  background: rgb(200, 0, 0);
-  border-radius: 20px;
-}
-
-.python-progress {
-  width: 70%;
-}
-
-.html-progress {
-  width: 90%;
-}
-
-.css-progress {
-  width: 90%;
-}
-
-.javascript-progress {
-  width: 75%;
-}
-
-.c-progress {
-  width: 60%;
-}
-
-.linux-progress {
-  width: 65%;
-}
-
-.git-progress {
-  width: 80%;
-}
-
-.github-progress {
-  width: 80%;
-}
-
-.visualstudio-progress {
-  width: 90%;
-}
-
-.chromedevtools-progress {
-  width: 85%;
-}
-
-#projects {
-  padding-top: 80px;
 }
 
 #content3 {
@@ -508,30 +387,22 @@ section {
   transition: 0.6s;
   gap: 5%;
 }
-
 .project:nth-child(1) {
   background: rgb(12, 35, 40);
 }
-
 .project:nth-child(2) {
-  background: rgb(40, 12, 35);
   background: rgb(12, 26, 40);
 }
-
 .project:nth-child(3) {
-  background: rgb(40, 12, 26);
   background: rgb(40, 12, 15);
 }
-
 .project img {
   width: 400px;
   transition: 0.3s;
 }
-
 .project img:hover {
   transform: scale(1.2);
 }
-
 .project h2 {
   width: fit-content;
   margin: 20px;
@@ -556,26 +427,30 @@ section {
   align-items: center;
 }
 
-.view-project, .git-project {
+.view-project {
   height: 55px;
   width: 150px;
   padding: 16px;
   text-align: center;
   border: 2px solid white;
-  color: rgb(255, 83, 97);
   font-size: 18px;
+  color: rgb(255, 83, 97);
 }
-
-.view-project:hover, .git-project:hover {
+.view-project:hover {
   border: 2px solid rgb(255, 83, 97);
   box-shadow: 0 0 5px rgb(255, 83, 97);
   transition: 0.4s;
 }
 
 .git-project {
+  height: 55px;
+  width: 150px;
+  padding: 16px;
+  text-align: center;
+  border: 2px solid white;
+  font-size: 18px;
   color: rgb(192, 83, 255);
 }
-
 .git-project:hover {
   border: 2px solid rgb(192, 83, 255);
   box-shadow: 0 0 5px rgb(192, 83, 255);
@@ -599,14 +474,115 @@ section {
     margin-top: 45px;
   }
 }
-#contact {
-  padding: 80px 0;
+#content2 {
+  display: flex;
+  justify-content: center;
+}
+
+#content2 > div {
+  margin: 0 25px;
+  display: flex;
+  flex-direction: column;
+  width: 325px;
+  background: rgba(10, 10, 10, 0.8);
+  border: 2px solid transparent;
+  box-shadow: 0 0 10px rgb(53, 53, 53);
+  padding: 10px 20px;
+  transition: transform 0.6s;
+}
+
+@keyframes rotation {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  5% {
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(1.05) rotate(0.4deg);
+  }
+  100% {
+    transform: scale(1.05) rotate(-0.4deg);
+  }
+}
+#content2 > div:hover {
+  border: 2px solid rgb(255, 83, 97);
+  box-shadow: 0 0 5px rgb(255, 83, 97);
+  animation-name: rotation;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#content2 h2 {
+  text-align: center;
+  font-size: 30px;
+}
+
+.skill {
+  display: flex;
+}
+.skill img {
+  width: 75px;
+  margin: 10px;
+}
+.skill img:hover, .skill i:hover {
+  transform: scale(1.15);
+  transition: 0.3s;
+}
+.skill p {
+  margin-top: 18px;
+  margin-left: 3px;
+}
+
+.progress {
+  background: rgb(169, 169, 169);
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 95px;
+  width: 175px;
+  height: 15px;
+  border-radius: 20px;
+}
+.progress p {
+  position: absolute;
+  top: -50px;
+  left: 145px;
+}
+
+.lang-progress {
+  height: 100%;
+  background: rgb(200, 0, 0);
+  border-radius: 20px;
+}
+
+.libframe-progress {
+  height: 100%;
+  background: rgb(0, 200, 0);
+  border-radius: 20px;
+}
+
+.tool-progress {
+  height: 100%;
+  background: rgb(0, 0, 200);
+  border-radius: 20px;
+}
+
+@media only screen and (max-width: 1100px) {
+  #content2 {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 60px;
+  }
+}
+section:nth-of-type(5) {
+  padding-bottom: 80px;
   text-align: center;
   justify-content: center;
   font-weight: bold;
 }
-
-form {
+section:nth-of-type(5) form {
   background: rgb(10, 10, 10);
   display: flex;
   flex-direction: column;
@@ -618,7 +594,12 @@ form {
   border: 1px solid transparent;
   box-shadow: 0 0 10px rgb(53, 53, 53);
 }
-form input, form textarea {
+section:nth-of-type(5) form:hover {
+  border: 1px solid rgb(255, 83, 97);
+  box-shadow: 0 0 5px rgb(255, 83, 97);
+  transition: 0.6s;
+}
+section:nth-of-type(5) form input, section:nth-of-type(5) form textarea {
   border: 0;
   margin: 12px 0;
   padding: 20px;
@@ -631,17 +612,17 @@ form input, form textarea {
   border-radius: 5px;
   border-bottom: 3px solid transparent;
 }
-form input:focus, form textarea:focus {
+section:nth-of-type(5) form input:focus, section:nth-of-type(5) form textarea:focus {
   border-bottom: 3px solid rgb(255, 83, 97);
   transition: 0.6s;
 }
-form ::placeholder {
+section:nth-of-type(5) form ::placeholder {
   color: rgb(189, 189, 189);
   font-family: "Calibri";
   font-size: 16px;
   font-weight: 400;
 }
-form button {
+section:nth-of-type(5) form button {
   cursor: pointer;
   width: 160px;
   height: 50px;
@@ -654,16 +635,10 @@ form button {
   font-weight: 800;
   line-height: 50px;
 }
-form button:hover {
+section:nth-of-type(5) form button:hover {
   box-shadow: 0 0 5px rgb(255, 83, 97);
   transform: scale(1.1);
   transition: 0.4s;
-}
-
-form:hover {
-  border: 1px solid rgb(255, 83, 97);
-  box-shadow: 0 0 5px rgb(255, 83, 97);
-  transition: 0.6s;
 }
 
 footer {
@@ -682,40 +657,33 @@ footer .logo {
   line-height: 0;
   margin: 20px;
 }
-
-#countries {
+footer #countries {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-.flag {
+footer .flag {
   height: 25px;
   width: 40px;
   margin: 15px 10px;
 }
-
-.flag:hover {
+footer .flag:hover {
   transform: scale(1.2);
   transition: 0.3s;
 }
-
-#footer-links {
+footer #footer-links {
   margin: 0px;
 }
-
-#footer-links a {
+footer #footer-links a {
   margin: 0px 10px 40px 10px;
   text-decoration: underline;
   color: rgb(189, 189, 189);
 }
-
-#footer-links a:hover {
+footer #footer-links a:hover {
   color: white;
   transition: 0.3s;
 }
-
-#copyright {
+footer #copyright {
   margin: 10px 20px 0 20px;
 }
 
