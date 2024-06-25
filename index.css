@@ -446,15 +446,15 @@ section {
 }
 
 .html-progress {
-  width: 80%;
+  width: 90%;
 }
 
 .css-progress {
-  width: 80%;
+  width: 90%;
 }
 
 .javascript-progress {
-  width: 70%;
+  width: 75%;
 }
 
 .c-progress {
@@ -481,76 +481,124 @@ section {
   width: 85%;
 }
 
-/* #projects {
-    width: 100%;
-    padding: 50px 15px;
+#projects {
+  padding-top: 80px;
 }
+
 #content3 {
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
-@media only screen and (max-width: 1300px) {
-    #content3 {
-        flex-direction: column;
-        align-items: center;
-    }
-    .project {
-        margin-bottom: 40px;
-    }
+
+@media only screen and (max-width: 900px) {
+  .project {
+    flex-direction: column;
+    row-gap: 50px !important;
+  }
 }
 .project {
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-    height: 500px;
-    background: rgb(10, 10, 10);
-    font-size: 22px;
-    box-shadow: 0 0 10px rgb(53, 53, 53);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 22px;
+  padding: 150px 30px;
+  transition: 0.6s;
+  gap: 5%;
 }
+
+.project:nth-child(1) {
+  background: rgb(12, 35, 40);
+}
+
+.project:nth-child(2) {
+  background: rgb(40, 12, 35);
+  background: rgb(12, 26, 40);
+}
+
+.project:nth-child(3) {
+  background: rgb(40, 12, 26);
+  background: rgb(40, 12, 15);
+}
+
+.project img {
+  width: 400px;
+  transition: 0.3s;
+}
+
+.project img:hover {
+  transform: scale(1.2);
+}
+
 .project h2 {
-    margin: 20px 0;
-    border-bottom: 2px solid white;
-    width: fit-content;
-    align-self: center;
+  width: fit-content;
+  margin: 20px;
+  font-size: 48px;
+  color: white;
 }
-.project p {
-    margin: 0 20px 20px 20px;
-    color: rgb(211, 211, 211);
+
+.information {
+  width: 450px;
 }
-.view-project {
-    position: absolute;
-    margin: 350px 0 0 0;
-    align-self: center;
-    height: 55px;
-    width: 170px;
-    padding: 16px;
-    text-align: center;
-    border: 2px solid white;
-    color: $secondary-color;
-    font-size: 18px;
+
+.information > * {
+  margin: 0 20px 20px 20px;
+  color: rgb(211, 211, 211);
 }
-.view-project:hover {
-    border: 2px solid $secondary-color;
-    box-shadow: 0 0 10px $secondary-color;
-    transition: 0.4s;
+
+.project-buttons {
+  display: flex;
+  width: 320px;
+  height: 70px;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.view-project, .git-project {
+  height: 55px;
+  width: 150px;
+  padding: 16px;
+  text-align: center;
+  border: 2px solid white;
+  color: rgb(255, 83, 97);
+  font-size: 18px;
+}
+
+.view-project:hover, .git-project:hover {
+  border: 2px solid rgb(255, 83, 97);
+  box-shadow: 0 0 5px rgb(255, 83, 97);
+  transition: 0.4s;
+}
+
 .git-project {
-    position: absolute;
-    margin: 415px 0 0 0;
-    align-self: center;
-    height: 55px;
-    width: 170px;
-    padding: 16px;
-    text-align: center;
-    border: 2px solid white;
-    color: rgb(192, 83, 255);
-    font-size: 18px;
+  color: rgb(192, 83, 255);
 }
+
 .git-project:hover {
-    border: 2px solid rgb(192, 83, 255);
-    box-shadow: 0 0 10px rgb(192, 83, 255);
-    transition: 0.4s;
-} */
+  border: 2px solid rgb(192, 83, 255);
+  box-shadow: 0 0 5px rgb(192, 83, 255);
+  transition: 0.4s;
+}
+
+@media only screen and (max-width: 500px) {
+  .information {
+    width: 95%;
+  }
+  .project img {
+    width: 100%;
+    transition: 0.3s;
+  }
+  .project-buttons {
+    height: 75%;
+    width: 90%;
+    column-gap: 15px !important;
+    row-gap: 20px !important;
+    flex-wrap: wrap;
+    margin-top: 45px;
+  }
+}
 #contact {
   padding: 80px 0;
   text-align: center;
