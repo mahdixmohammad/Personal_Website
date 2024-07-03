@@ -3,11 +3,11 @@ $secondary-color: rgb(255, 83, 97);
 
 @font-face {
     font-family: "Logam";
-    src: url("fonts/Logam.otf");
+    src: url("assets/fonts/Logam.otf");
 }
 @font-face {
     font-family: "Agency";
-    src: url("fonts/Agency.TTF");
+    src: url("assets/fonts/Agency.TTF");
 }
 html {
     scroll-behavior: smooth;
@@ -209,7 +209,7 @@ section:not(section:first-of-type) {
 #pfp {
     background: {
         color: white;
-        image: url("images/profile_picture.png");
+        image: url("assets/images/profile_picture.png");
         position: center;
         size: 142px;
         repeat: no-repeat;
