@@ -5,6 +5,10 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
 	mode: "production",
 	entry: "./src/index.ts",
+	// devtool: "inline-source-map",
+	// devServer: {
+	// 	static: "./dist",
+	// },
 	plugins: [
 		new HtmlWebpackPlugin({
 			template: "./src/index.html",
