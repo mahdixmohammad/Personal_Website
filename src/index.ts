@@ -4,11 +4,9 @@ require("./index.scss");
 // DOM variables
 const nav: HTMLElement = document.querySelector("nav")!;
 const hamburger: HTMLElement = document.querySelector("#hamburger")!;
-const navlinks: NodeListOf<HTMLElement> =
-	document.querySelectorAll("nav a, #contactbtn");
+const navlinks: NodeListOf<HTMLElement> = document.querySelectorAll("nav a, #contactbtn");
 const reveals: NodeListOf<HTMLElement> = document.querySelectorAll(".popin");
-const progressBars: NodeListOf<HTMLElement> =
-	document.querySelectorAll(".progress");
+const progressBars: NodeListOf<HTMLElement> = document.querySelectorAll(".progress");
 
 // enables dropdown menu with nav links when hamburger is clicked (small screen sizes only)
 hamburger.onclick = (): void => {
@@ -24,9 +22,7 @@ navlinks.forEach((navlink: HTMLElement): void => {
 
 // loads the width of all the progress bars in skills section automatically
 progressBars.forEach((progressBar: HTMLElement): void => {
-	progressBar.querySelector(
-		"div"
-	)!.style.width = `${progressBar.textContent}`;
+	progressBar.querySelector("div")!.style.width = `${progressBar.textContent}`;
 });
 
 // as user scrolls down, sections pop in
@@ -38,10 +34,7 @@ function popInAnimation(): void {
 
 		if (element.classList.contains("project")) elementVisible = 20;
 		let elementTop: number = element.getBoundingClientRect().top;
-		let distanceFromView: number = Math.max(
-			0,
-			window.innerHeight - elementTop - elementVisible
-		);
+		let distanceFromView: number = Math.max(0, window.innerHeight - elementTop - elementVisible);
 		let opacity: number = (distanceFromView / elementVisible) * 0.4 - 1;
 		let scale: number = (distanceFromView / elementVisible) * 0.1 + 0.25;
 
