@@ -106,35 +106,49 @@ section:not(section:first-of-type) {
 	margin: auto;
 	overflow: hidden;
 }
-@keyframes mahdiFadeIn {
+@keyframes popIn {
 	to {
 		opacity: 0;
+		transform: scale(0);
 	}
+}
+@keyframes slideleft {
+	to {
+		left: -100%;
+	}
+}
+.animation-cover {
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	background: black;
+	box-shadow: 0 0 100px 100px black;
+	animation: slideleft;
+	animation-duration: 3s;
+	animation-timing-function: ease-in;
+	animation-fill-mode: forwards;
 }
 #mahdi {
 	position: absolute;
 	height: 600px;
 	margin-top: 13px;
 	right: 15%;
-	animation: mahdiFadeIn;
-	animation-duration: 2s;
-	animation-timing-function: ease-in-out;
-	animation-direction: reverse;
-}
-@keyframes headLineSlide {
-	to {
-		left: -1500px;
-	}
+	// animation: popIn;
+	// animation-duration: 1.5s;
+	// animation-timing-function: ease-in;
+	// animation-direction: reverse;
 }
 #headline {
-	z-index: 1;
+	z-index: 20;
 	position: relative;
 	left: 15%;
 	margin-top: 150px;
 	height: 225px;
 	width: 413px;
-	animation: headLineSlide;
-	animation-duration: 2.5s;
+	animation: popIn;
+	animation-duration: 1.5s;
 	animation-timing-function: ease-in;
 	animation-direction: reverse;
 
@@ -275,13 +289,16 @@ section:nth-of-type(2) p {
 	gap: 5%;
 
 	&:nth-child(1) {
-		background: rgb(12, 35, 40);
+		background: rgb(62, 53, 21);
 	}
 	&:nth-child(2) {
-		background: rgb(40, 34, 12);
+		background: rgb(17, 48, 55);
 	}
 	&:nth-child(3) {
-		background: rgb(12, 26, 40);
+		background: rgb(55, 21, 21);
+	}
+	&:nth-child(4) {
+		background: rgb(15, 32, 49);
 	}
 	img {
 		width: 400px;
