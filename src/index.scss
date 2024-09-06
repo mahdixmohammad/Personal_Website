@@ -106,12 +106,7 @@ section:not(section:first-of-type) {
 	margin: auto;
 	overflow: hidden;
 }
-@keyframes popIn {
-	to {
-		opacity: 0;
-		transform: scale(0);
-	}
-}
+
 @keyframes slideleft {
 	to {
 		left: -100%;
@@ -126,7 +121,8 @@ section:not(section:first-of-type) {
 	background: black;
 	box-shadow: 0 0 100px 100px black;
 	animation: slideleft;
-	animation-duration: 3s;
+	animation-delay: 1.2s;
+	animation-duration: 2s;
 	animation-timing-function: ease-in;
 	animation-fill-mode: forwards;
 }
@@ -135,10 +131,12 @@ section:not(section:first-of-type) {
 	height: 600px;
 	margin-top: 13px;
 	right: 15%;
-	// animation: popIn;
-	// animation-duration: 1.5s;
-	// animation-timing-function: ease-in;
-	// animation-direction: reverse;
+}
+@keyframes popIn {
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
 }
 #headline {
 	z-index: 20;
@@ -147,10 +145,13 @@ section:not(section:first-of-type) {
 	margin-top: 150px;
 	height: 225px;
 	width: 413px;
+	opacity: 0;
+	transform: scale(0);
 	animation: popIn;
-	animation-duration: 1.5s;
+	animation-delay: 0.5s;
+	animation-duration: 1s;
 	animation-timing-function: ease-in;
-	animation-direction: reverse;
+	animation-fill-mode: forwards;
 
 	h1 {
 		font-size: 65px;
@@ -208,7 +209,6 @@ section:not(section:first-of-type) {
 		}
 	}
 }
-
 .scroll-to {
 	visibility: hidden;
 	width: 0.1px;
@@ -236,33 +236,55 @@ section:not(section:first-of-type) {
 	display: flex;
 	margin: auto;
 	width: 90%;
+	column-gap: 5%;
 }
-#pfp {
-	background: {
-		color: white;
-		image: url("assets/images/profile_picture.png");
-		position: center;
-		size: 142px;
-		repeat: no-repeat;
-	}
-	width: 162px;
-	height: 162px;
-	border-radius: 100px;
-	margin: 0 20px;
-	margin-right: 5%;
-	box-shadow: 0 0 6px white;
-	border: 1px solid transparent;
+#education {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	align-items: center;
 
-	&:hover {
-		border: 1px solid $secondary-color;
-		box-shadow: 0 0 10px $secondary-color;
-		transition: 0.4s;
+	#gpa {
+		display: flex;
+		align-items: center;
+		height: 50px;
+		gap: 5px;
+
+		img {
+			width: 25px;
+			object-fit: contain;
+		}
+		p {
+			margin: 0;
+			font-size: 1.3rem;
+			color: white;
+		}
+	}
+	#pfp {
+		background: {
+			color: white;
+			image: url("assets/images/profile_picture.png");
+			position: center;
+			size: 142px;
+			repeat: no-repeat;
+		}
+		width: 162px;
+		height: 162px;
+		border-radius: 100px;
+		margin: 0 20px;
+		box-shadow: 0 0 6px white;
+		border: 1px solid transparent;
+
+		&:hover {
+			border: 1px solid $secondary-color;
+			box-shadow: 0 0 10px $secondary-color;
+			transition: 0.4s;
+		}
 	}
 }
 #description {
 	width: 70%;
 }
-
 section:nth-of-type(2) h2 {
 	font-size: 40px;
 }
@@ -647,7 +669,7 @@ footer {
 	}
 	section:nth-of-type(2) p {
 		text-align: left;
-		font-size: 20px;
+		font-size: 22px;
 	}
 	.information {
 		width: 95%;
