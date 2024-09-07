@@ -33,6 +33,13 @@ module.exports = {
 				test: /\.scss$/,
 				use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
 			},
+			{
+				test: /\.pdf$/,
+				type: "asset/resource",
+				generator: {
+					filename: "[name][ext]",
+				},
+			},
 		],
 	},
 };

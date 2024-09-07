@@ -1,4 +1,5 @@
 require("./index.scss");
+require("./Mahdi-Mohammad-Resume.pdf");
 
 ("use strict");
 // DOM variables
