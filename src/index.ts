@@ -1,4 +1,5 @@
 require("./index.scss");
+require("./particles.js");
 require("./Mahdi-Mohammad-Resume.pdf");
 
 ("use strict");
