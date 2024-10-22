@@ -11,6 +11,7 @@ $secondary-color: rgb(255, 83, 97);
 }
 html {
 	scroll-behavior: smooth;
+	scrollbar-color: $secondary-color rgba(10, 10, 10, 0.9);
 }
 * {
 	padding: 0;
@@ -120,8 +121,8 @@ section:not(section:first-of-type) {
 	background: black;
 	box-shadow: 0 0 100px 100px black;
 	animation: slideleft;
-	animation-delay: 1.2s;
-	animation-duration: 2.3s;
+	animation-delay: 0.9s;
+	animation-duration: 1.4s;
 	animation-timing-function: ease-in;
 	animation-fill-mode: forwards;
 }
@@ -170,7 +171,7 @@ section:not(section:first-of-type) {
 	transform: scale(0);
 	animation: popIn;
 	animation-delay: 0.5s;
-	animation-duration: 1s;
+	animation-duration: 0.5s;
 	animation-timing-function: ease-in;
 	animation-fill-mode: forwards;
 
@@ -196,7 +197,7 @@ section:not(section:first-of-type) {
 	div {
 		display: flex;
 		justify-content: space-evenly;
-		width: 245px;
+		width: 180px;
 	}
 	%sublink-hover {
 		border: 2px solid $secondary-color;
@@ -414,21 +415,20 @@ section:nth-of-type(2) p {
 	}
 }
 @keyframes rotation {
-	5% {
-		transform: scale(1.05);
+	from {
+		transform: rotate(0.5deg);
 	}
-	50% {
-		transform: scale(1.05) rotate(0.4deg);
-	}
-	100% {
-		transform: scale(1.05) rotate(-0.4deg);
+	to {
+		transform: rotate(-0.5deg);
 	}
 }
 #content3 > div:hover {
 	border: 2px solid $secondary-color;
 	box-shadow: 0 0 5px $secondary-color;
+	scale: 1.05;
+	transition: 0.3s;
 	animation-name: rotation;
-	animation-duration: 3s;
+	animation-duration: 1.5s;
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
